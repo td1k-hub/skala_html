@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
-    <style>
-      body {font-family: "Song Myung", serif;}
-    </style>
+  <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
-    <h1>회원가입</h1>
-    <p>SKALA-FRONT 회원가입을 축하합니다</p>
+    <h1>회  원  가  입</h1>
+    <p style="margin-left: 20px;">회원가입을 환영합니다</p>
 
     <form>
         <fieldset>
             <legend>계정 정보</legend>
-            <p>
-                <label for="userId">아이디: </label>
+
+            <p> 
+                <label for="userId">* 아이디: </label>
                 <input type="text" id="userId" name="usesrId" minlength="4" maxlength="15" required placeholder="4~15 영문/숫자">
-                <small>(필수)</small>
             </p>
             <p>
-                <label for="userPw">비밀번호: </label>
+                <label for="userPw">* 비밀번호: </label>
                 <input type="password" id="userPW" name="userPw" minlength="8" required placeholder="8자 이상 입력">
-                <small>(필수)</small>
             </p>
             <p>
                 <label for="userEmail">이메일: </label>
@@ -39,6 +34,7 @@
                     <option value="daum.net">daum.net</option>
                 </select>
             </p>
+            <small>(*는 필수사항입니다.)</small>
         </fieldset>
 
         <fieldset>
