@@ -10,8 +10,8 @@
     <div class="container">
         <h1>김서영의 유니버스🪐 </h1>
         <p>더 넓은 세상으로 나아가는 저의 소우주를 구경하세요😆</p>
-        <br>
         <h2>🗂️ 바로가기 메뉴</h2>
+
         <nav>
     <ul>
         <li><a href="myClass.html">나의 수업 (myClass)</a></li>
@@ -20,8 +20,30 @@
         <li><a href="myTrip.html"> 여행 앨범 (myTrip) </a></li>
         <li><a href="SignUp.html">회원가입 (SignUp) </a></li>
     </ul>
-    </nav>
+            <h4 style="border-bottom: 2px solid #e3bcc9;"></h4>
      <div class="content-wrapper">
+        <aside>
+                <h2>🌤️ 실시간 정보</h2>
+                <p>현재 위치: 광주광역시 광산구 📍</p>
+                <section>
+                    <h3>🌤️ 실시간 세계 날씨</h3>
+                    <select id="city-select">
+                        <option value="none">도시를 선택하세요</option>
+                        <option value="37.56,126.97">대한민국 서울 🇰🇷</option>
+                        <option value="35.67,139.65">일본 도쿄 🇯🇵</option>
+                        <option value="48.85,2.35">프랑스 파리 🇫🇷</option>
+                    </select>
+                    <div id="weather-box">
+                        <p>도시를 선택하면 좌표가 표시됩니다.</p>
+                    </div>
+                </section>
+                <section class="game-area">
+                <h3>🎮 자바스크립트천국</h3>
+                <button class="btn-submit" onclick="startGame()">업다운 게임 🚀</button>
+                <button class="btn-submit" onclick="checkGrade()">성적 계산기 📊</button>
+                <button class="btn-submit" onclick="showMyBag()">내 가방 보기 🎒</button>
+                </section>
+            </aside>
             <main>
                 <h2>📌 오늘의 주요 소식</h2>
 
@@ -43,35 +65,13 @@
                 </section>
             </main>
 
-            <aside>
-                <h2>🌤️ 실시간 정보</h2>
-                <p>현재 위치: 광주광역시 광산구 📍</p>
-                <section>
-                    <h3>🌤️ 실시간 세계 날씨</h3>
-                    <select id="city-select">
-                        <option value="none">도시를 선택하세요</option>
-                        <option value="37.56,126.97">대한민국 서울 🇰🇷</option>
-                        <option value="35.67,139.65">일본 도쿄 🇯🇵</option>
-                        <option value="48.85,2.35">프랑스 파리 🇫🇷</option>
-                    </select>
-                    <div id="weather-box">
-                        <p>도시를 선택하면 좌표가 표시됩니다.</p>
-                    </div>
-                </section>
-                <hr> 
-                <section class="game-area">
-                <h3>🎮 자바스크립트천국</h3>
-                <button class="btn-submit" onclick="startGame()">업다운 게임 🚀</button>
-                <button class="btn-submit" onclick="checkGrade()">성적 계산기 📊</button>
-                <button class="btn-submit" onclick="showMyBag()">내 가방 보기 🎒</button>
-                </section>
-            </aside>
+            
         </div>
         <hr>
 
         <footer>
-            <p>이메일 문의: medit74@sk.com | 추천 학습 사이트: <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
-            <p><small>© 2026 병호 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
+            <p>이메일 문의: tjdud5387k@gmail.com</p>
+            <p><small>© 2026 서영 포트폴리오. </small></p>
         </footer>
     </div>
     <script src="script/upDown.js"></script>

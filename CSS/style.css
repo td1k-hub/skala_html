@@ -5,7 +5,7 @@
       font-family: "Song Myung", serif;
       line-height: 1.2;
       color: #53494f; /*전체 폰트 색상*/            
-      font-size: 30px;
+      font-size: 20px;
       background-color:#fef2f7;
       /*background-image: url(../media/picture/space2.jpg);
       background-size: cover;          
@@ -39,7 +39,7 @@ h2 {
 
 h3 {
     color:#53494f;
-    font-size: 38px;
+    font-size: 25px;
     padding-bottom: 5px;
     border-bottom: 3px solid #e3bcc9;
     margin-top: 25px;
@@ -177,9 +177,11 @@ nav ul {
     list-style: none;
     padding: 0;
     gap: 20px;
+    justify-content: center;
 }
 
 nav a {
+    display: flex;
     padding: 8px 16px;
 }
 
@@ -187,3 +189,30 @@ nav a:hover {
     color: #d4a2b2;
 }
 
+/*Grid 여행지 앨범 3열 바둑판 배치*/
+.trip-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/*메인 가로배치*/
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+main {
+    flex: 7;
+    padding: 15px;
+    background-color: #ffeaf2;
+    border-radius: 8px;
+}
+aside {
+    flex: 3;
+    padding: 15px;
+    background-color: #ffeaf2;
+    border-radius: 8px;
+}
