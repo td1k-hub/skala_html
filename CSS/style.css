@@ -4,15 +4,23 @@
  body {
       font-family: "Song Myung", serif;
       line-height: 1.2;
-      color: #3b3b3b;                  /* 너무 완전한 검은색(#000)보다 눈이 편한 짙은 회색 */
-      background-color: #eae9d8;       /* 완전 흰색보다 부드러운 아이보리빛 미색 */
+      color: #2a2a2a;               /* 너무 완전한 검은색(#000)보다 눈이 편한 짙은 회색 */
+      background-color: #f3e6ec;       /* 완전 흰색보다 부드러운 아이보리빛 미색 */
       font-size: 30px;
     }
 
 /*메인 제목 스타일*/
 h1 {
     font-size: 50px;
+    color: #2a2a2a;
+    padding-bottom: 20px;
+    border-bottom:3px solid #da9aaa;
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
     color: #232323;
     padding-bottom: 20px;
-    border-bottom:3px solid #a7ae6f;
+    border-bottom:3px solid #edd1df;
+    text-align: center;
 }
