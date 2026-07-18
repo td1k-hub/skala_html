@@ -12,7 +12,17 @@ function startTycoon() {
 
     const area = document.getElementById('game-area');
     area.innerHTML = `
-        <div style="text-align: left; font-size: 14px; line-height: 1.6; border: 1px solid #eee; padding: 10px; margin-bottom: 15px;">
+        <div style="
+        display: flex; 
+        flex-direction: column; 
+        text-align: left; 
+        font-size: 14px; 
+        line-height: 1.6; 
+        border: 1px solid #eee; 
+        padding: 15px; 
+        margin-bottom: 15px; 
+        width: 100%; 
+        box-sizing: border-box;"> 
             <p><strong>[게임 목표]</strong> 10일 동안 파산하지 않고 수익을 극대화하세요.</p>
             <p><strong>[비즈니스 규칙]</strong></p>
             <ul>
