@@ -241,6 +241,12 @@ aside {
         grid-template-columns: 1fr; 
     }
 
+    nav a:hover {
+    background-color: #f7e7ec;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 }
 
 /*부드러운 전환 및 애니메이션 효과*/

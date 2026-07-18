@@ -1,11 +1,11 @@
 function checkGrade() {
-    var subjects = ["HTML", "CSS", "JavaScript"];
+    let subjects = ["HTML", "CSS", "JavaScript"];
     //과목 명이 담긴 배열 선언
-    var total = 0;
+    let total = 0;
     //점수들을 누적하여 더해줄 총 점 변수를 0으로 초기화
 
-    for(var i = 0; i < subjects.length; i++){
-        var score = Number(prompt(subjects[i] + "점수를 입력해주세요. (0~100)"));
+    for(let i = 0; i < subjects.length; i++){
+        let score = Number(prompt(subjects[i] + "점수를 입력해주세요. (0~100)"));
 
         if (isNaN(score)){ 
             //사용자가 취소 버튼을 눌렀을 때의 예외 처리
@@ -15,9 +15,9 @@ function checkGrade() {
 
         total = total + score;
     }
-    var average = total / subjects.length;
+    let average = total / subjects.length;
 
-    var result = "";
+    let result = "";
     if(average>=90){
     result = "🎉 A등급입니다! 축하합니다";
     } else if (average>=80){

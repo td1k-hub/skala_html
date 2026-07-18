@@ -1,14 +1,14 @@
 function showMyBag() {
-    var mybag = [
+    let mybag = [
         {name: "여권✈️", count:1 },
         {name: "지갑💰", count:1 },
         {name: "휴대폰📱", count:1 },
         {name: "보조배터리🔋", count:2 }
     ];
 
-    var resultText = "내 가방 속 물건들:\n------------------------\n";
+    let resultText = "내 가방 속 물건들:\n------------------------\n";
 
-    for (var i = 0; i < mybag.length; i++) {
+    for (let i = 0; i < mybag.length; i++) {
         resultText += mybag[i].name + " : " + mybag[i].count + "개\n";
     }
     resultText += "------------------------\n";
