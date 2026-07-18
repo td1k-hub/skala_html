@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-  <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* 스크롤 버튼 스타일 */
+        .scroll-top-btn {
+            position: fixed; bottom: 30px; right: 30px; font-size: 20px;
+            background-color: #ffffff; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border-radius: 50%; width: 50px; height: 50px; cursor: pointer;
+            display: none; z-index: 2000; transition: all 0.3s ease;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .scroll-top-btn:hover { background-color: #f8f8f8; transform: translateY(-5px); }
+    </style>
 </head>
 <body>
 <div class="side-menu-wrapper" id="sideMenu">
@@ -24,16 +34,16 @@
     <h1>회  원  가  입</h1>
     <p style="margin-left: 20px;">회원가입을 환영합니다</p>
 
-    <form>
+    <!-- action 속성을 추가하여 결과 페이지로 연결 -->
+    <form action="signUpResult.html" method="GET">
         <fieldset>
             <legend>계정 정보</legend>
-
             <p> 
                 <label for="userId">* 아이디: </label>
-                <input type="text" id="userId" name="usesrId" minlength="4" maxlength="15" required placeholder="4~15 영문/숫자">
+                <input type="text" id="userId" name="userId" minlength="4" maxlength="15" required placeholder="4~15 영문/숫자">
             </p>
             <p>
-                <label for="userPw">* 비밀번호: </label>
+                <label for="userPW">* 비밀번호: </label>
                 <input type="password" id="userPW" name="userPw" minlength="8" required placeholder="8자 이상 입력">
             </p>
             <p>
@@ -57,7 +67,7 @@
                 <input type="text" id="userName" name="userName" required>
             </p>
             <p>
-                <lable for="userBirth">생년월일: </lable>
+                <label for="userBirth">생년월일: </label>
                 <input type="date" id="userBirth" name="userBirth">
             </p>
             <p>
@@ -86,17 +96,16 @@
         <fieldset>
             <legend>자기소개</legend>
             <p>
-                <label for="intro">나를 표현하는 한 줄 소개 도는 가입 인사: </label><br>
+                <label for="intro">나를 표현하는 한 줄 소개 또는 가입 인사: </label><br>
                 <textarea id="intro" name="intro" rows="5" cols="50" placeholder="여기에 내용을 입력하세요 (최대 200자)"></textarea>
             </p>
         </fieldset>
-        <!-- input 대신 button 태그 사용 -->
-        <button type="button" class="btn-submit" onclick="location.href='signUpResult.html'">
-            동의하고 회원가입
-        </button>
+        <input type="submit" class="btn-submit" value="회원가입 완료">
         <input type="reset" class="btn-reset" value="다시 작성">
     </form>
+
     <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">⏏︎</button>
+    
     <script src="../script/scroll.js"></script>
     <script src="script/toggle.js"></script>  
 </body>
