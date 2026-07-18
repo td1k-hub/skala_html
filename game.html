@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>김서영의 게임 센터</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <h1>🎮 게임 센터</h1>
+    <a href="index.html" class="btn-home">⬅ 홈으로</a>
+    
+    <!-- 1. 게임 선택 화면 -->
+    <div id="game-selection" class="game-grid">
+        <div class="game-box">
+            <h3>🔠 단어 맞추기</h3>
+            <button class="btn-submit" onclick="startHangman()">시작하기</button>
+        </div>
+        <div class="game-box">
+            <h3>🧩 카드 뒤집기</h3>
+            <button class="btn-submit" onclick="startMemoryGame()">시작하기</button>
+        </div>
+        <div class="game-box">
+            <h3>⚡ 끝말잇기</h3>
+            <button class="btn-submit" onclick="startWordRelay()">시작하기</button>
+        </div>
+        <div class="game-box">
+            <h3>🧮 재고 최적화</h3>
+            <button class="btn-submit" onclick="startTycoon()">시작하기</button>
+        </div>
+    </div>
+
+    <!-- 2. 오버레이 게임창 (기본값 display: none) -->
+    <div id="game-overlay" class="game-overlay" style="display: none;">
+        <div class="overlay-content">
+            <h2 id="game-title">게임 제목</h2>
+            <div id="game-area"></div>
+            <br><br>
+            <button class="btn-submit" onclick="stopGame()">그만두기 🛑</button>
+        </div>
+    </div>
+
+    <script src="script/hangman.js"></script>
+    <script src="script/memory.js"></script>
+    <script src="script/relay.js"></script>
+    <script src="script/tycoon.js"></script>
+</body>
+</html>

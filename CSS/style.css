@@ -1,46 +1,41 @@
 /*구글 폰트*/
 @import url(https://fonts.googleapis.com/css2?family=Song+Myung&display=swap);
 
- body {
-      font-family: "Song Myung", serif;
-      line-height: 1.2;
-      color: #53494f; /*전체 폰트 색상*/            
-      font-size: 20px;
-      background-color:#fef2f7;
-      /*background-image: url(../media/picture/space2.jpg);
-      background-size: cover;          
-      background-position: center;     
-      background-repeat: no-repeat;  
-      background-attachment: fixed;   
-
-      margin: 0;
-      min-height: 100vh;*/
-    }
+body {
+    font-family: "Song Myung", serif;
+    line-height: 1.2;
+    color: #53494f;            
+    font-size: 20px;
+    background-color: #fcfcf0; /* 전체 배경: 크림색 */
+    margin: 0;
+}
 
 h1 {
     font-size: 50px;
-    color: #53494f; /*폰트 색*/
+    color: #53494f;
     padding-bottom: 20px;
     text-align: center;
 }
 
 h2 {
     font-size: 20px;
-    color: #53494f;/*폰트 색*/
-    background-color: #f0d8e1; /*네모칸 배경 색*/
-    padding-bottom: 20px;
-    border-bottom:5px solid #e3bcc9; /*밑줄 색*/
-    text-align: center;
+    color: #53494f;
+    background-color: #fff9e6; /* 제목: 연노랑 */
     padding: 10px 15px;
+    border: 2px solid #e3bcc9; /* 보라빛 핑크 테두리 */
+    border-radius: 15px;
+    text-align: center;
     margin-top: 40px;
     margin-bottom: 15px;
+    
 }
 
 h3 {
-    color:#53494f;
+    color: #53494f;
+    background-color: #d0f0e0; /* 소제목: 민트색 */
+    padding: 10px;
+    border-radius: 10px;
     font-size: 25px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #e3bcc9;
     margin-top: 25px;
     margin-bottom: 10px;
 }
@@ -51,19 +46,19 @@ a {
 }
 
 a:hover {
-    color: #bb8294;
+    color: #8c82bb; /* 보라 포인트 */
 }
-
 
 * {
     box-sizing: border-box;
 }
 
 .custom-line {
-    border: none;              
-    border-top: 3px solid #e3bcc9;   
+    border: none;             
+    border-top: 3px dashed #d0e0f0; /* 포인트: 하늘색 점선 */
 }
-.container{
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -71,11 +66,12 @@ a:hover {
 
 /* myTrip.html */
 .trip-card {
+    background-color: #fdfbf7;
     border: 2px solid #e3bcc9;
     border-radius: 20px;    
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 2px 5px #d9b1be;
+    box-shadow: 4px 4px 0px #d9b1be; /* 귀여운 입체감 */
 }
 
 .trip-card img {
@@ -83,12 +79,13 @@ a:hover {
     margin-bottom: 12px;
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 /* myClass.html */
 table {
     width: 100%;
-    border-collapse: collapse; /*이중 테두리 병합*/
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
@@ -100,20 +97,26 @@ th, td {
 }
 
 th {
-    background-color:#f9dde6;
+    background-color: #d0e0f0; /* 표 헤더: 하늘색 */
 }
 
-/* SignUp.html */
+td {
+    background-color: #fdfbf7;
+}
+
+/* SignUp.html 및 내비게이션 스타일 수정 */
 fieldset {
     border: 2px solid #e3bcc9;
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 20px;
+    background-color: #fdfbf7;
 }
 
-legend{
+legend {
     font-weight: bold;
     padding: 0 10px;
+    color: #53494f;
 }
 
 input[type="text"],
@@ -126,81 +129,78 @@ textarea {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 2px solid #e3bcc9;
+    border: 2px solid #d0e0f0; /* 하늘색 테두리 */
     border-radius: 8px;
     font-family: inherit;
-    font-size: 0.95em
-}
-
-input[type="radio"],
-input[type="checkbox"]{
-    width: auto;
-    margin-bottom: 15px;
-    cursor: pointer;
+    font-size: 0.95em;
+    background-color: #fcfcfc;
 }
 
 textarea {
-    resize: vertical; /*가로로 늘어남 방지*/
-    min-height: 120px; /*최소 높이 지정*/
+    resize: vertical;
+    min-height: 120px;
 }
 
-.btn-submit,
-.btn-reset {
-    font-family: "Song Myung", serif;
-    background-color: #ffe8ef;
+/* 버튼: 다채로운 파스텔 컬러 적용 */
+.btn-submit {
+    border: 2px solid #c5c5e0;
+    background-color: #c5c5e0; /* 보라색 */
+    color: white;
     padding: 12px 25px;
-    font-size: 1em;
     font-weight: bold;
-    border-radius: 8px;  
-    margin-right: 10px;
-
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btn-submit{
-    border: 2px solid #d9b1be; 
-    background-color: #efcad7;
-}
 .btn-submit:hover {
-    background-color: #eebfd0;     
-    border-color: #d4a2b2; 
+    background-color: #b0b0d0;
 }
+
 .btn-reset {
-    border: 2px solid #c7bdc1; 
-    background-color: #dad0d5;
+    border: 2px solid #d0f0e0; /* 민트색 */
+    background-color: #d0f0e0;
+    color: #53494f;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-reset:hover {
-    background-color: #d2c6cd;     
-    border-color: #9f9d9d;
+    background-color: #b9e8d0;
 }
 
-/*Flex 와 Grid로 레이아웃 잡기*/
-
+/* 네비게이션 */
 nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    padding: 10px;
     gap: 20px;
     justify-content: center;
+    background-color: #fff9e6; /* 노랑색 배경 */
+    border-radius: 50px;
 }
 
 nav a {
     display: flex;
     padding: 8px 16px;
+    transition: 0.3s;
+    border-radius: 20px;
 }
 
 nav a:hover {
-    color: #af7688;
+    background-color: #f7d7e3; /* 핑크색 포인트 */
+    color: #53494f;
 }
 
-/*Grid 여행지 앨범 3열 바둑판 배치*/
+/* 레이아웃 및 반응형 디자인 수정 */
 .trip-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-
-/*메인 가로배치*/
 
 .content-wrapper {
     display: flex;
@@ -208,93 +208,114 @@ nav a:hover {
     align-items: stretch;
 }
 
+/* 메인 영역: 크림색 배경 */
 main {
     flex: 7;
-    padding: 15px;
-    background-color: #ffeaf2;
-    border-radius: 8px;
+    padding: 20px;
+    background-color: #fdfbf7;
+    border: 2px solid #e3bcc9;
+    border-radius: 20px;
 }
+
+/* 사이드바 영역: 연한 민트색 배경 */
 aside {
     flex: 3;
-    padding: 15px;
-    background-color: #ffeaf2;
-    border-radius: 8px;
+    padding: 20px;
+    background-color: #d0f0e0;
+    border: 2px solid #e3bcc9;
+    border-radius: 20px;
 }
 
-@media (max-width: 768px) {
+.mobile-break { display: none; }
 
+@media (max-width: 768px) {
+    .mobile-break { display: inline; }
+    
     nav ul {
         flex-direction: column;
         gap: 10px;
+        background-color: #fcfcf0; /* 배경 유지 */
     }
-
+    
     .content-wrapper {
         flex-direction: column;
         gap: 20px;
     }
-
+    
     main, aside {
         width: 100%;
     }
-
+    
     .trip-grid-container {
         grid-template-columns: 1fr; 
     }
 
     nav a:hover {
-    background-color: #f7e7ec;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+        background-color: #d0e0f0; /* 반응형 호버: 하늘색 */
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+    }
+
+    .table-wrapper { width: 100%; overflow-x: auto; }
+    
+    table { min-width: 600px; }
+
+    /* 플로팅 내비게이션 */
+    .floating-nav {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: #fff9e6; /* 노랑색 */
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .tab-trigger {
+        width: 55px;
+        height: 70px;
+        background-color: #c5c5e0; /* 보라색 */
+        border-radius: 10px;
+    }
 }
 
-}
-
-/*부드러운 전환 및 애니메이션 효과*/
-
+/* 부드러운 전환 및 애니메이션 효과 */
 nav a {
     transition: background-color 0.3s ease, color 0.3s ease;
     padding: 8px 16px;
-    
 }
 
 nav a:hover {
-    transform: translateY(-2px);       
+    transform: translateY(-2px);
 }
 
 .btn-submit, .btn-reset {
     transition: all 0.2s ease;
 }
 
-/*마우스 호버 둥실 떠오르는 효과*/
+/* 마우스 호버 둥실 떠오르는 효과 */
 .trip-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip-card:hover {
-    transform: translateY(-8px);   
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* 그림자 톤 조절 */
 }
 
-/* 3. 메인 페이지 웰컴 키프레임 애니메이션 (@keyframes) */
-
-/* [3-1] 아래에서 위로 부드럽게 페이드인 되는 애니메이션 설정 구조 정의 */
+/* 웰컴 키프레임 애니메이션 */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 body h1 {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* 게임 영역 스타일 */
 .game-area {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,22 +323,200 @@ body h1 {
 }
 
 .game-area button {
-    width: 85%;                 
+    width: 85%;
     padding: 10px;
     border: none;
-    border-radius: 20px;       
+    border-radius: 20px;
     font-size: 0.9em;
     font-weight: bold;
-    color: #7a4d5c;
+    color: #6a6a80; /* 기본 텍스트 톤 */
+    background-color: #fdfbf7;
+    border: 2px solid #d0e0f0; /* 하늘색 테두리 */
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 은은한 그림자 추가 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
     transition: all 0.2s ease;
 }
 
-/* 마우스 올렸을 때 둥실 떠오르는 효과 */
 .game-area button:hover {
-    color: #af7688;
+    color: #c5c5e0; /* 보라 포인트 */
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    background-color: #fceaef;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-color: #fff9e6; /* 노랑 호버 */
 }
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hole {
+    aspect-ratio: 1 / 1;
+    background: #fff9e6; /* 노랑 구멍 */
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #e3bcc9;
+}
+
+.mole {
+    background: #c5c5e0 !important; /* 보라 두더지 */
+}
+
+.hit {
+    background: #d0f0e0 !important; /* 민트 히트 */
+    transform: scale(0.9);
+    transition: all 0.1s;
+}
+/* 홈 버튼 및 사이드 메뉴 스타일 */
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #53494f;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+    border-radius: 15px;
+}
+
+.btn-game {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #53494f;
+    text-decoration: underline; 
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn-game:hover {
+    color:#071429
+}
+
+.btn-home:hover {
+    background-color: #fff9e6; /* 노랑 포인트 */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-decoration: underline;
+}
+
+.side-menu-wrapper {
+    position: fixed;
+    top: 200px;
+    right: -130px; 
+    transition: right 0.4s ease;
+    display: flex;
+    align-items: flex-start; 
+    z-index: 1000;
+}
+
+.side-menu-wrapper.active {
+    right: 0; 
+}
+
+.tab-trigger {
+    width: 25px;
+    height: 80px; 
+    background-color: #c5c5e0; /* 보라 포인트 */
+    border: none;             
+    border-radius: 10px 0 0 10px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.05); 
+}
+
+.tab-trigger:hover {
+    background-color: #b0b0d0; 
+    transform: translateX(-3px); 
+}
+
+.menu-list {
+    margin: 0;
+    padding: 20px;
+    background: #fdfbf7;
+    border: 2px solid #e3bcc9;
+    border-radius: 0 10px 10px 10px; 
+    list-style: none;
+    width: 130px;
+    box-shadow: 5px 5px 0px rgba(227, 188, 201, 0.2);
+}
+
+
+.log-item {
+    font-size: 1em;
+    margin-bottom: 12px;
+    color: #53494f;
+    padding-left: 10px;
+    border-left: 3px solid #d0f0e0; /* 민트색 포인트 바 */
+}
+
+#game-selection { 
+        display: grid; 
+        /* 1fr(1 fraction)을 사용하여 화면 폭을 똑같이 나눔 */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 20px; 
+        padding: 20px;
+        max-width: 1200px; /* 너무 넓어지는 것 방지 */
+        margin: 0 auto;    /* 화면 중앙 정렬 */
+    }
+.game-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    padding: 20px; }
+
+.game-box { 
+    border: 2px solid #e3bcc9; 
+    padding: 20px; 
+    border-radius: 15px; 
+    text-align: center; 
+    background: white; }
+        
+/* 화면 전체를 덮는 투명한 배경 */
+.game-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 맨 위로 */
+}
+
+/* 실제 게임이 들어갈 박스 */
+.overlay-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 60%;
+    text-align: center;
+    border: 3px solid #e3bcc9;
+}
+
+.card { 
+    background: #f9f9f9; 
+    border-radius: 8px; 
+    transition: background 0.3s; 
+}
+
+.card.flipped { 
+    background: #fff0f5; 
+    border-color: #e3bcc9; 
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 15px;              
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;    }
+    
+    

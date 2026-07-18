@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,20 @@
 </head>
 </head>
 <body>
-    <h1>👋 안녕하세요! 저를 소개합니다</h1>
+<div class="side-menu-wrapper" id="sideMenu">
+    <button class="tab-trigger" onclick="toggleSideMenu()">▶</button>
+    <ul class="menu-list">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="myClass.html">수업</a></li>
+        <li><a href="myHoliday.html">휴일</a></li>
+        <li><a href="myProfile.html">프로필</a></li>
+        <li><a href="myTrip.html">앨범</a></li>
+        <li><a href="SignUp.html">회원가입</a></li>
+    </ul>
+</div>
+    <div class="container">
+    <a href="index.html" class="btn-home">⬅ 홈으로</a>
+    <h1>👋 안녕하세요! <span class="mobile-break"><br></span> 저를 소개합니다</h1>
     <hr class="custom-line">
     <p> 아래는 제가 좋아하는 것들과 올해의 계획, 그리고 저를 포함하는 단어들입니다. </p>
         <br>
@@ -42,6 +55,6 @@
         </dl>
     </div>      
 
-
+        <script src="script/toggle.js"></script>  
 </body>
 </html>

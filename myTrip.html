@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,19 @@
 </head>
 </head>
 <body>
+<div class="side-menu-wrapper" id="sideMenu">
+    <button class="tab-trigger" onclick="toggleSideMenu()">▶</button>
+    <ul class="menu-list">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="myClass.html">수업</a></li>
+        <li><a href="myHoliday.html">휴일</a></li>
+        <li><a href="myProfile.html">프로필</a></li>
+        <li><a href="myTrip.html">앨범</a></li>
+        <li><a href="SignUp.html">회원가입</a></li>
+    </ul>
+</div>
+    <div class="container">
+    <a href="index.html" class="btn-home">⬅ 홈으로</a>
     <h1>🌎나의 여행 앨범🎵</h1>
     <audio controls autoplay>
         <source src="" type="audio/ogg">
@@ -34,6 +47,6 @@
             Your browser does not support the video tag.
         </video>
         <br> 비 오는 날의 에버랜드(2022)
-
+        <script src="script/toggle.js"></script>  
 </body>
 </html>
