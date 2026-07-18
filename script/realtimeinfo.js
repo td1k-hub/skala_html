@@ -1,4 +1,3 @@
-// 1. 방금 만든 weatherAPI.js 모듈에서 핵심 비동기 함수를 쏙 훔쳐옵니다.
 import { getLiveWeather } from './wheatherAPI.js';
 
 const citySelect = document.querySelector('#city-select');
@@ -6,7 +5,7 @@ const weatherBox = document.querySelector('#weather-box');
 
 citySelect.addEventListener('change', async function(event) {
 
-    console.log("선택된 옵션의 값:", event.target.value); // 디버깅용 로그
+    console.log("선택된 옵션의 값:", event.target.value); 
 
     const selectedValue = event.target.value;
     if (selectedValue === "none") {
@@ -19,7 +18,6 @@ citySelect.addEventListener('change', async function(event) {
 
     weatherBox.innerHTML = "<p>모듈을 통해 실시간 수신 중... 📡</p>";
 
-    // 2. 수입해온 비동기 모듈 함수를 실행해 결과만 딱 받아옵니다. (코드가 훨씬 간결해집니다!)
     const weatherInfo = await getLiveWeather(coords[0], coords[1]);
 
     if (weatherInfo) {
