@@ -21,7 +21,6 @@ h1 {
     font-size: 50px;
     color: #53494f; /*폰트 색*/
     padding-bottom: 20px;
-    border-bottom:3px solid #e3bcc9; /*밑줄 색*/
     text-align: center;
 }
 
@@ -52,13 +51,18 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #bb8294;
 }
+
 
 * {
     box-sizing: border-box;
 }
 
+.custom-line {
+    border: none;              
+    border-top: 3px solid #e3bcc9;   
+}
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -186,7 +190,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #d4a2b2;
+    color: #af7688;
 }
 
 /*Grid 여행지 앨범 3열 바둑판 배치*/
@@ -215,4 +219,99 @@ aside {
     padding: 15px;
     background-color: #ffeaf2;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main, aside {
+        width: 100%;
+    }
+
+    .trip-grid-container {
+        grid-template-columns: 1fr; 
+    }
+
+}
+
+/*부드러운 전환 및 애니메이션 효과*/
+
+nav a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 16px;
+    
+}
+
+nav a:hover {
+    transform: translateY(-2px);       
+}
+
+.btn-submit, .btn-reset {
+    transition: all 0.2s ease;
+}
+
+/*마우스 호버 둥실 떠오르는 효과*/
+.trip-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);   
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. 메인 페이지 웰컴 키프레임 애니메이션 (@keyframes) */
+
+/* [3-1] 아래에서 위로 부드럽게 페이드인 되는 애니메이션 설정 구조 정의 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body h1 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.game-area {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.game-area button {
+    width: 85%;                 
+    padding: 10px;
+    border: none;
+    border-radius: 20px;       
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #7a4d5c;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 은은한 그림자 추가 */
+    transition: all 0.2s ease;
+}
+
+/* 마우스 올렸을 때 둥실 떠오르는 효과 */
+.game-area button:hover {
+    color: #af7688;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background-color: #fceaef;
 }
