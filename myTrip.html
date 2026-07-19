@@ -6,7 +6,6 @@
     <title>나의 여행지</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* 게임 센터와 동일한 오버레이 스타일 */
         .game-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); flex-direction: column; align-items: center; justify-content: center; z-index: 1000; }
         .overlay-content { background: white; color: black; padding: 20px; border-radius: 15px; width: 90%; max-width: 400px; text-align: center; }
         .trip-card { cursor: pointer; display: inline-block; margin: 10px; }
@@ -28,9 +27,10 @@
     <div class="container">
         <a href="index.html" class="btn-home">🏠 홈으로</a>
         <h1>🌎나의 여행 앨범🎵</h1>
-        <audio controls autoplay>
-            <source src="" type="audio/ogg">
-            <source src="" type="audio/mpeg">
+        <audio id="tripAudio" controls>
+            <source src="media/music/또 다시 밤 twilight.mp3" type="audio/mpeg">
+            <source src="media/music/BlueMoon.mp3" type="audio/mpeg">
+            <source src="media/music/_WORLD.mp3" type="audio/mpeg">
         </audio>
 
         <div class="album-info">
@@ -38,7 +38,6 @@
         </div>
 
         <div class="trip-grid-container">
-            <!-- 클릭 시 showTripInfo 함수 호출 -->
             <p class="trip-card" onclick="showTripInfo('여수 하늘', '여수에서 바라본 하늘입니다. 오른쪽으로는 오동도가 보이고 왼쪽으로는 남해가 보이는 전망이 좋은 사진입니다.')">
                 <img src="../media/picture/myhome.jpg" alt="여수 하늘" width="400" height="200"> <br>여수 하늘 (2026)
             </p>
@@ -52,13 +51,24 @@
         <hr>
 
         <h2>나의 여행 브이로그</h2>
-        <video width="225" height="400" controls>
-            <source src="../media/video/everland.mp4" type="video/mp4"> 
-        </video>
-        <br> 비 오는 날의 에버랜드(2022)
+        <div class="video-section" style="display: flex; align-items: center; gap: 20px;">
+            <div class="video-wrapper">
+                <video width="225" height="400" controls>
+                    <source src="../media/video/everland.mp4" type="video/mp4"> 
+                </video>
+                <p>비 오는 날의 에버랜드(2022)</p>
+            </div>
+    
+    <div class="video-info">
+        <h4>의외의 낭만이 있는 날</h4>
+        <p>비가 오는 날 에버랜드는 맑은 날과는 또 다른 분위기가 있습니다.</p>
+        <p>비로 인해 탈 수 있는 놀이기구가 제한이 되었지만, 그 덕에 에버랜드의 풍경을 구경하게 되었습니다</p>
+        <p>급하게 여기저기 뛰며, 몇시간을 기다려 놀이기구를 타는 날이 아닌, 여유롭게 주변을 구경하는 하루</p>
+        <p>신경 못쓰던 에버랜드의 여러 정원을 엿볼 수 있는 하루였습니다.</p>
+    </div>
+</div>
     </div>
 
-    <!-- 오버레이 팝업창 (게임 센터와 동일 구조) -->
     <div id="game-overlay" class="game-overlay">
         <div class="overlay-content">
             <h2 id="game-title">설명</h2>
@@ -69,7 +79,6 @@
     </div>
 
     <script>
-        // 오버레이 제어 함수 (게임 센터의 함수들과 동일하게 작동)
         function showTripInfo(title, desc) {
             document.getElementById('game-overlay').style.display = 'flex';
             document.getElementById('game-title').innerText = title;

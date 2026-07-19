@@ -43,32 +43,27 @@ function checkRelay() {
     const input = document.getElementById('r-input').value;
     const msg = document.getElementById('relay-msg');
 
-    // 1. 규칙 검증 (글자 수 및 끝말잇기)
     if (input.length < 2 || lastWord[lastWord.length - 1] !== input[0]) {
         msg.textContent = "틀렸습니다! 다시 입력하세요.";
         msg.style.color = "red";
         return;
     }
 
-    // 2. 중복 확인
     if (wordList.includes(input)) {
         msg.textContent = "이미 사용된 단어입니다!";
         return;
     }
 
-    // 3. 사용자 성공 처리
     wordList.push(input);
     lastWord = input;
     document.getElementById('current-word').textContent = lastWord;
     document.getElementById('r-input').value = '';
 
-    // 4. 컴퓨터의 응답 (0.5초 뒤 자동 실행)
     setTimeout(computerResponse, 500);
 }
 
 function computerResponse() {
     const msg = document.getElementById('relay-msg');
-    // 마지막 단어의 끝 글자로 시작하는 단어 찾기
     const nextWord = computerWords.find(w => w[0] === lastWord[lastWord.length - 1] && !wordList.includes(w));
 
     if (nextWord) {
